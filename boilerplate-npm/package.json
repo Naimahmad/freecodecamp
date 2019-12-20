@@ -3,6 +3,7 @@
   "author": "Naimahmad",
   "description": "A project that does something awesome",
   "keywords": [ "freecodecamp", "descriptive", "related", "words" ],
+   "license": "MIT",
   "dependencies": {
     "express": "^4.14.0"
   },
