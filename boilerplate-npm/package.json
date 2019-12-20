@@ -3,6 +3,8 @@
   "author": "Naimahmad",
   "description": "A project that does something awesome",
   "keywords": [ "freecodecamp", "descriptive", "related", "words" ],
+  "license": "MIT",
+  "version": "1.2.0",
   "dependencies": {
   "package-name": "moment",
   "express": "2.14.0"
