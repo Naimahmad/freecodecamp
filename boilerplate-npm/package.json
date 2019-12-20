@@ -4,6 +4,10 @@
   "description": "A project that does something awesome",
   "keywords": [ "freecodecamp", "descriptive", "related", "words" ],
   "dependencies": {
+  "package-name": "moment",
+  "express": "2.14.0"
+  },
+  "dependencies": {
     "express": "^4.14.0"
   },
   "main": "server.js",
