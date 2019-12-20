@@ -62,7 +62,16 @@ app.get("/:word/echo", (req, res) => {
 
 /** 10) Get input from client - Query parameters */
 // /name?first=<firstname>&last=<lastname>
-
+app.get("/name", function(req, res) {
+  //var firstName = req.query.first;
+  //var lastName = req.query.last;
+  // OR you can destructure and rename the keys
+  const { first: firstName, last: lastName } = req.query;
+  // Use template literals to form a formatted string
+  res.json({
+    name: `${firstName} ${lastName}`
+  });
+});
   
 /** 11) Get ready for POST Requests - the `body-parser` */
 // place it before all the routes !
