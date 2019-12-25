@@ -19,9 +19,13 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 
 /** # SCHEMAS and MODELS #
 /*  ====================== */
-
+const Schema = mongoose.Schema;
 /** 2) Create a 'Person' Model */
-
+const personSchema = new Schema({
+  name: { type: String, required: true },
+  age: Number,
+  favoriteFoods: [String]
+});
 // First of all we need a **Schema**. Each schema maps to a MongoDB collection
 // and defines the shape of the documents within that collection. Schemas are
 // building block for Models. They can be nested to create complex models,
@@ -42,7 +46,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 
 // <Your code here >
 
-var Person /* = <Your Model> */
+var Person = mongoose.model("Person", personSchema);
 
 // **Note**: Glitch is a real server, and in real servers interactions with
 // the db are placed in handler functions, to be called when some event happens
